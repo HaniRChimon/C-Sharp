@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quoting Dojo</title>
+    <style>
+        .container{
+            border: 3px solid black;
+            width: 45%;
+            height: 360px;
+            padding: 20px;
+            text-align: center;
+            margin:0px auto;
+            background-color: salmon;
+        }
+        .container input {
+            width: 90%;
+            clear: both;
+            
+        }
+        .container textarea {
+            width: 90%;
+            clear: both;
+        }
+
+    </style>
+</head>
+@model User
+<body>
+    
+<div class="container">
+    <h1>Welcome To Quoting Dojo!!</h1>
+    <span asp-validation-for="UserName"> </span>
+    <span asp-validation-for="UserQuote"> </span>
+
+    <form asp-action="Create" asp-controller="Home" method="Post">
+        <label>Your Name: </label> <input type="text" asp-for="UserName"><br>
+        <label>Your Quote: </label> <textarea asp-for="UserQuote" cols="30" rows="10"></textarea><br><br>
+        <input style="background-color: lightblue;" type="submit" value="Add My Quote">
+    </form>
+    <form asp-action="Dashboard" asp-controller="Home" method="Get">
+        <input style="background-color: lightgreen;" type="submit" value="Skip To My Quote">
+    </form>
+    
+</div>
+</body>
+</html>
