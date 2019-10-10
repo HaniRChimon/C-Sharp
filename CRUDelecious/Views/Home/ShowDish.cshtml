@@ -1,0 +1,16 @@
+@model Dish
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    body{
+        padding:20px;
+    }
+</style>
+<a href="/">Home</a>
+<h1><label style="color:blue;"> Dish Name: </label> @Model.DishName</h1>
+<h3><label style="color:blue;"> Chef Name: </label> @Model.ChefName</h3>
+<hr>
+<label style="color:blue;">Dish Description: </label><p>@Model.Description</p>
+<label style="color:blue;">Dish Calories: </label><p>Calories: @Model.Calories</p>
+<label style="color:blue;">Dish Tastiness: </label><p>Tastiness: @Model.Tastiness</p>
+
+<a href="/delete/@Model.DishId" class="btn btn-danger">Delete</a>

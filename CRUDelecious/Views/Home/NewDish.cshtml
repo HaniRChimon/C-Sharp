@@ -1,0 +1,29 @@
+@model Dish
+<style>
+    .dishbox input{
+        width: 100%;
+        clear: both;
+        background-color: lightblue;
+    }
+    #btn{
+        background-color: green;
+        color: white;
+        
+    }
+</style>
+<div class="dishbox">
+<form asp-action="ProcessDish" asp-controller="Home" method="post">
+    <label>Chef Name: </label> <input type="text" asp-for="ChefName"><br>
+    <label>Dish Name: </label> <input type="text" asp-for="DishName"><br>
+    <label>Calories: </label> <input type="text" asp-for="Calories"><br>
+    <label>Tastiness: </label> <input min="1" max="5" asp-for="Tastiness"><br>
+    <label>Description: </label> <input style="height: 470px;" type="text" asp-for="Description"><br>
+    <input type="submit" value="Create Dish" id="btn">
+</form>
+</div>
+<div>
+<span asp-validation-for="ChefName"></span>
+<span asp-validation-for="DishName"></span>
+<span asp-validation-for="Calories"></span>
+<span asp-validation-for="Tastiness"></span>
+</div><span asp-validation-for="Description"></span>
