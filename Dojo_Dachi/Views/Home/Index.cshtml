@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo_Dachi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+#petBox{
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+    <h1>@ViewBag.Message</h1>
+<div id="petBox">
+        <button class="btn btn-outline-primary"><a href="/feed">Feed</a></button>
+        <button class="btn btn-outline-primary"><a href="/play">Play</a></button>
+        <button class="btn btn-outline-primary"><a href="/work">Work</a></button>
+        <button class="btn btn-outline-primary"><a href="/sleep">Sleep</a></button>
+        <br><br>
+        <h4>HAPPINESS</h4>
+        <p>@ViewBag.Happiness</p>
+        <hr>
+        <h4>FULLNESS</h4>
+        <p>@ViewBag.Fullness</p>
+        <hr>
+        <h4>ENERGY</h4>
+        <p>@ViewBag.Energy</p>
+        <hr>
+        <h4>MEALS</h4>
+        <p>@ViewBag.Meals</p>
+        <br>
+    <button class="btn btn-outline-danger"><a href="/restart">Restart</a></button>
+</div>
+
+
+
+</body>
+</html>
